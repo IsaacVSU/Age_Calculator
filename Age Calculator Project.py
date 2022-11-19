@@ -105,7 +105,7 @@ def hrAlive(p1):
     return hr_A
  
 def minAlive(p2):
-    min_A = ((p2*60)) + dt.minute #hours * (minutes per hour) + minutes now
+    min_A = ((p2*60) + dt.minute) #hours * (minutes per hour) + minutes now
     return min_A
 
 #Pressing CALCULATE button
