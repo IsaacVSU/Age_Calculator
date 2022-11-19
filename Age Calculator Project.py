@@ -20,7 +20,7 @@ Dayv = tk.StringVar()
 Monthv = tk.StringVar()
 Yearv = tk.StringVar()
 
-#Creating the labels for the widgets for Month, Year, and month.
+#Creating the labels for the widgets for Month, Year, and day.
 Day = tk.Label(text = 'Day *Enter as DD', bg='Aqua',width=18)
 Day.place(x=20,y=85)
 Month = tk.Label(text = 'Month *Enter as MM',bg='Aqua',width=18)
