@@ -99,7 +99,6 @@ def horo(d,m):
     if((m==2 and d>=19) or(m==3 and d>=20)):
         return "♓Pisces♓"
 
-
 def daysAlive(d, m,y):
     days_A = (dt.year-y) * 365
     x1 = 0
