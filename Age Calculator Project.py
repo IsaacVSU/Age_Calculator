@@ -72,6 +72,7 @@ def Yrage(d, m, y):
     elif(dt.month==m and dt.day<d): #checks if the day happened or not in a month
         age-=1
     return age
+
 def horo(d,m):
     #Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn,Aquarius, pisces, 
     if((m==3 and d>=21) or (m==4 and d<=19)):
