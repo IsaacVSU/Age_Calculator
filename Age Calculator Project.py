@@ -108,6 +108,14 @@ def minAlive(p2):
     min_A = ((p2*60) + dt.minute) #hours * (minutes per hour) + minutes now
     return min_A
 
+def secAlive(p3):
+    sec_A = ((p3*60)+dt.second)
+    return sec_A
+
+def msAlive(p4):
+    ms_A = ((p4*1000)+(dt.microsecond* 10**-3))
+    return ms_A
+
 #Pressing CALCULATE button
 def calculate():
     str1 = var()
@@ -126,7 +134,9 @@ def calculate():
     DayA = daysAlive(dayInt,monthInt, yearInt) #Days alive
     hrA = hrAlive(DayA) #hours alive
     minA = minAlive(hrA) #minutes alive
-    msg = f"Years Old: {Age}\nDays Alive: {DayA:,}\nHours Alive: {hrA:,}\nMinutes Alive: {minA:,}" 
+    secA = secAlive(minA) # seconds alive
+    msA = msAlive(secA)
+    msg = f"Years Old: {Age}\nDays Alive: {DayA:,}\nHours Alive: {hrA:,}\nMinutes Alive: {minA:,}\nSeconds Alive: {secA:,}\nMiliseconds Alive: {msA:,}" 
     showinfo("Age calcs:", msg)
 
 cal_button=Button(App,
