@@ -72,6 +72,33 @@ def Yrage(d, m, y):
     elif(dt.month==m and dt.day<d): #checks if the day happened or not in a month
         age-=1
     return age
+def horo(d,m):
+    #Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn,Aquarius, pisces, 
+    if((m==3 and d>=21) or (m==4 and d<=19)):
+        return "♈Aries♈"
+    if((m==4 and d>=20)or(m==5 and d<=20)):
+        return "♉Taurus♉"
+    if((m==5 and d>=21) or(m==6 and d<=20)):
+        return "♊Gemini♊"
+    if((m==6 and d>=21) or (m==7 and d<=22)):
+        return "♋Cancer♋"
+    if((m==7 and d>=23) or(m==8 and d<=22)):
+        return "♌Leo♌"
+    if((m==8 and d>=23) or (m==9 and d<=22)):
+        return "♍Virgo♍"
+    if((m==9 and d>=23) or (m==10 and d<=22)):
+        return "♎Libra♎"
+    if((m==10 and d>=23) or (m==11 and d<=21)):
+        return "♏Scorpio♏"
+    if((m==11 and d>=22) or (m==12 and d<=21)):
+        return "♐Sagittarius♐"
+    if((m==12 and d>=22) or (m==1 and d<=19)):
+        return "♑Capricorn♑"
+    if((m==1 and d>=20) or (m==2 and d<=18)):
+        return "♒Aquirius♒"
+    if((m==2 and d>=19) or(m==3 and d>=20)):
+        return "♓Pisces♓"
+
 
 def daysAlive(d, m,y):
     days_A = (dt.year-y) * 365
@@ -130,13 +157,14 @@ def calculate():
         month = str1[2:4]
     monthInt = int(month) #Gives me int months
     yearInt = int(str1[4:]) #Gives me the int year
+    Horoscope = horo(dayInt, monthInt)
     Age = Yrage(dayInt, monthInt, yearInt) 
     DayA = daysAlive(dayInt,monthInt, yearInt) #Days alive
     hrA = hrAlive(DayA) #hours alive
     minA = minAlive(hrA) #minutes alive
     secA = secAlive(minA) # seconds alive
     msA = msAlive(secA)
-    msg = f"Years Old: {Age}\nDays Alive: {DayA:,}\nHours Alive: {hrA:,}\nMinutes Alive: {minA:,}\nSeconds Alive: {secA:,}\nMiliseconds Alive: {msA:,}" 
+    msg = f"Horoscope: {Horoscope}\nYears Old: {Age}\nDays Alive: {DayA:,}\nHours Alive: {hrA:,}\nMinutes Alive: {minA:,}\nSeconds Alive: {secA:,}\nMiliseconds Alive: {msA:,}" 
     showinfo("Age calcs:", msg)
 
 cal_button=Button(App,
