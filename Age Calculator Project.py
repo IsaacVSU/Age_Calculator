@@ -108,6 +108,8 @@ def daysAlive(d, m,y):
     for xxxx in range(y, dt.year): #checks for leap year
         if(is_leapyr(xxxx)):
             count+=1
+    if(is_leapyr(y) and 2<m):
+        count-=1
     if(dt.month==m):
             x1 = d-dt.day #get the amount of days and subtract it from days alive
             if(dt.day==d):
