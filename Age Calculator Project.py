@@ -96,7 +96,7 @@ def horo(d,m):
     if((m==12 and d>=22) or (m==1 and d<=19)):
         return "♑Capricorn♑"
     if((m==1 and d>=20) or (m==2 and d<=18)):
-        return "♒Aquirius♒"
+        return "♒Aquarius♒"
     if((m==2 and d>=19) or(m==3 and d>=20)):
         return "♓Pisces♓"
 
